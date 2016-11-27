@@ -31,6 +31,8 @@ while loop != "no":
 	filename = open("reddit.txt", "r+")
 	filename.truncate(0)
 	for x in search_results:
+		filename.write(str(x.url))
+		filename.write(" ")
 		converted = str(x)
 		filename.write(time.strftime("%I:%M:%S"))
 		filename.write(converted)
